@@ -10,13 +10,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int weekday = 5;
-        int weekend = 9;
-        int optimalHours = 7 * 8;
-        int actualHours = weekday;
-        actualHours = actualHours * 5 + weekend * 2;
-        int solution = optimalHours - actualHours;
-        display(solution);
+        String firstName = "Lyla";
+        String lastName = "Fujiwara";
+        String contactInfo = firstName + " " + lastName;
+        contactInfo = "<" + lastName + "." + firstName + "@justjava.com>";
+        display(contactInfo);
 
     }
 
