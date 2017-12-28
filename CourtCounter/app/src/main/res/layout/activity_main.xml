@@ -47,6 +47,13 @@
             android:layout_margin="8dp"
             android:onClick="onePointA"
             android:text="free throw" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="resetA"
+            android:text="reset" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,6 +97,13 @@
             android:layout_margin="8dp"
             android:onClick="onePointB"
             android:text="free throw" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="resetB"
+            android:text="reset" />
     </LinearLayout>
 
 </LinearLayout>

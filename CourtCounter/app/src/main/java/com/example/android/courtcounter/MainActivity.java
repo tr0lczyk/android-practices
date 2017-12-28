@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /*resetting the score*/
+    public void resetA(View view) {
+        scoreTeamA = 0;
+        displayForTeamA(scoreTeamA);
+    }
+
     /*adds 3 for team A*/
     public void threePointsA(View view) {
         scoreTeamA = scoreTeamA + 3;
@@ -42,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    /*resetting the score*/
+    public void resetB(View view) {
+        scoreTeamB = 0;
+        displayForTeamB(scoreTeamB);
     }
 
     /*adds 3 for team B*/
