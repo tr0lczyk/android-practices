@@ -33,7 +33,7 @@
                 android:text="Star Wars Quiz"
                 android:textColor="#fff"
                 android:textSize="45sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Padawan..."
-                android:textSize="34sp" />
+                android:textSize="34sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -354,7 +354,8 @@
                 android:layout_gravity="center_horizontal"
                 android:padding="16dp"
                 android:text="Submit Answers"
-                android:textAllCaps="true" />
+                android:textColor="#fff"
+                android:textAllCaps="true"/>
 
         </LinearLayout>
     </LinearLayout>
