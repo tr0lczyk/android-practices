@@ -76,7 +76,8 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:hint="name"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:id="@+id/player_name"/>
 
             </LinearLayout>
 
@@ -355,7 +356,8 @@
                 android:padding="16dp"
                 android:text="Submit Answers"
                 android:textColor="#fff"
-                android:textAllCaps="true"/>
+                android:textAllCaps="true"
+                android:onClick="displayToast"/>
 
         </LinearLayout>
     </LinearLayout>
