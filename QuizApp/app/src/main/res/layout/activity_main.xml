@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:background="#fff"
-                android:elevation="20dp"
+                android:elevation="5dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -75,15 +75,17 @@
                 <EditText
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:hint="name" />
+                    android:hint="name"
+                    android:inputType="text" />
 
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:background="#fff"
-                android:elevation="20dp"
+                android:elevation="5dp"
                 android:padding="16dp">
 
                 <TextView
@@ -91,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="2. Second question - What is the home planet of admiral )It's a trap!) Ackbar?" />
+                    android:text="2. Second question - What is the home planet of admiral - It's a trap! - Ackbar?" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -127,15 +129,79 @@
                     </RadioGroup>
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
-                        android:src="@drawable/akbar"
-                        android:layout_gravity="center_horizontal"/>
+                        android:src="@drawable/akbar" />
 
                 </LinearLayout>
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#000"
+                android:elevation="5dp"
+                android:padding="16dp">
 
+                <TextView
+                    android:id="@+id/sidious_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="3. Third question - Who was the Darth Sidious's apprentice? More than one answer is correct."
+                    android:textColor="#fff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/sidious_question"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:src="@drawable/palp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#fff"
+                            android:text="General Grievous"
+                            android:textColor="#fff" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#fff"
+                            android:text="Count Dooku "
+                            android:textColor="#fff" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#fff"
+                            android:text="Anakin Skywalker"
+                            android:textColor="#fff" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#fff"
+                            android:text="Darth Maul"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
 
             <LinearLayout
@@ -143,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:background="#fff"
-                android:elevation="20dp"
+                android:elevation="5dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -151,14 +217,136 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="1. First question - what's your name?" />
+                    android:text="4. Forth question - Which ship made the Kessel run in less than 12 parsecs?" />
+
 
                 <EditText
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="name" />
+                    android:hint="name"
+                    android:inputType="text" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/falcon" />
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/old_republic_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="5. Fifth question - How many years have passed since the age of Old Republic?" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/old_republic_question"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:src="@drawable/malak" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 000 years" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 000 years" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500 years" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 years" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="5dp"
+                android:background="#fff"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/planets_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="6. Sixth question - Who was Master Yoda's apprentice? More than one answer is correct."/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/planets_question"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General Grievous"/>
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Count Dooku " />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Anakin Skywalker" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Darth Maul" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:src="@drawable/palp" />
+                </LinearLayout>
+            </RelativeLayout>
 
 
         </LinearLayout>
