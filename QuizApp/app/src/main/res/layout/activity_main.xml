@@ -52,10 +52,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="fill_horizontal"
                 android:paddingBottom="16dp"
                 android:paddingTop="16dp"
-                android:text="...you will participate in a trial that will test your guts and knowledge. Prepare for the questions (and answers!) from the deepest corners of the galaxy.\nMay the force be with you!" />
+                android:text="...you will participate in a trial that will test your guts and knowledge. Prepare for the questions (and answers!) from the deepest corners of the galaxy. May the force be with you!" />
 
             <LinearLayout
                 style="@style/QuestionLayoutStyle"
