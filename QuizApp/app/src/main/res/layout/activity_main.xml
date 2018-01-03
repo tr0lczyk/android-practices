@@ -60,7 +60,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background"
                 android:elevation="4dp"
                 android:orientation="vertical"
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="1. What's your name?" />
+                    android:text="What's your name?" />
 
                 <EditText
                     android:layout_width="120dp"
@@ -84,7 +84,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background"
                 android:elevation="4dp"
                 android:padding="16dp">
@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="2. What is the home planet of admiral - It's a trap! - Ackbar?" />
+                    android:text="1. What is the home planet of admiral - It's a trap! - Ackbar?" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,7 +110,8 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mon Cala" />
+                            android:text="Mon Cala"
+                            android:id="@+id/one_good_answear"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -142,7 +143,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background2"
                 android:elevation="4dp"
                 android:padding="16dp">
@@ -152,7 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="3. Who was the Darth Sidious's apprentice? More than one answer is correct."
+                    android:text="2. Who was the Darth Sidious's apprentice? More than one answer is correct."
                     android:textColor="#fff" />
 
                 <LinearLayout
@@ -186,21 +187,25 @@
                             android:layout_height="wrap_content"
                             android:buttonTint="#fff"
                             android:text="Count Dooku "
-                            android:textColor="#fff" />
+                            android:textColor="#fff"
+                            android:id="@+id/two_good_answearA"/>
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="#fff"
                             android:text="Anakin Skywalker"
-                            android:textColor="#fff" />
+                            android:textColor="#fff"
+                            android:id="@+id/two_good_answearB"/>
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="#fff"
                             android:text="Darth Maul"
-                            android:textColor="#fff" />
+                            android:textColor="#fff"
+                            android:id="@+id/two_good_answearC"/>
+
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -208,7 +213,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background"
                 android:elevation="4dp"
                 android:orientation="vertical"
@@ -218,14 +223,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="4. Which ship made the Kessel run in less than 12 parsecs?" />
+                    android:text="3. Which ship made the Kessel run in less than 12 parsecs?" />
 
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="name"
-                    android:inputType="text" />
+                    android:hint="Ship's name"
+                    android:inputType="text"
+                    android:id="@+id/three_good_answear"/>
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -237,7 +243,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background"
                 android:elevation="4dp"
                 android:padding="16dp">
@@ -247,7 +253,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="5. How many years have passed since the age of Old Republic?" />
+                    android:text="4. How many years have passed since the age of Old Republic?" />
 
 
                 <LinearLayout
@@ -271,7 +277,8 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4 000 years" />
+                            android:text="500 years"
+                            />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -281,7 +288,8 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="500 years" />
+                            android:text="4 000 years"
+                            android:id="@+id/four_good_answear"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -295,7 +303,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="36dp"
                 android:background="@drawable/shadow_background"
                 android:elevation="4dp"
                 android:padding="16dp"
@@ -306,7 +314,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="6. Who was Master Yoda's apprentice? More than one answer is correct."/>
+                    android:text="5. Who was Master Yoda's apprentice? More than one answer is correct."/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -323,7 +331,8 @@
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Count Dooku"/>
+                            android:text="Count Dooku"
+                            android:id="@+id/five_good_answearA"/>
 
                         <CheckBox
                             android:layout_width="wrap_content"
@@ -333,12 +342,14 @@
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Luke Skywalker" />
+                            android:text="Luke Skywalker"
+                            android:id="@+id/five_good_answearB"/>
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Qui-Gon Jinn" />
+                            android:text="Qui-Gon Jinn"
+                            android:id="@+id/five_good_answearC"/>
                     </LinearLayout>
 
                     <ImageView
