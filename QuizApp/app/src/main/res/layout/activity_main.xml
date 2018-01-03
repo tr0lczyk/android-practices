@@ -33,7 +33,7 @@
                 android:text="Star Wars Quiz"
                 android:textColor="#fff"
                 android:textSize="45sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <LinearLayout
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Padawan..."
-                android:textSize="34sp"/>
+                android:textSize="34sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -58,74 +58,50 @@
                 android:text="...you will participate in a trial that will test your guts and knowledge. Prepare for the questions (and answers!) from the deepest corners of the galaxy.\nMay the force be with you!" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                style="@style/QuestionLayoutStyle"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    style="@style/QuestionTextView"
                     android:text="What's your name?" />
 
                 <EditText
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:hint="name"
-                    android:inputType="text"
-                    android:id="@+id/player_name"/>
+                    android:id="@+id/player_name"
+                    style="@style/EditText"
+                    android:hint="player's name" />
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background"
-                android:elevation="4dp"
-                android:padding="16dp">
+            <RelativeLayout style="@style/QuestionLayoutStyle">
 
                 <TextView
                     android:id="@+id/akbar_question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    style="@style/QuestionTextView"
                     android:text="1. What is the home planet of admiral - It's a trap! - Ackbar?" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/akbar_question"
-                    android:orientation="horizontal">
+                    style="@style/RadioLinearLayout"
+                    android:layout_below="@id/akbar_question">
 
                     <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/RadioGroup"
                         android:layout_weight="2">
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mon Cala"
-                            android:id="@+id/one_good_answear"/>
+                            android:id="@+id/one_good_answer"
+                            style="@style/RadioButton"
+                            android:text="Mon Cala" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/RadioButton"
                             android:text="Tatooine" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/RadioButton"
                             android:text="Naboo" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/RadioButton"
                             android:text="Nar Shaddaa" />
 
                     </RadioGroup>
@@ -138,100 +114,65 @@
                         android:src="@drawable/akbar" />
 
                 </LinearLayout>
+
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background2"
-                android:elevation="4dp"
-                android:padding="16dp">
+            <RelativeLayout style="@style/QuestionLayoutStyle2">
 
                 <TextView
                     android:id="@+id/sidious_question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="2. Who was the Darth Sidious's apprentice? More than one answer is correct."
+                    style="@style/QuestionTextView"
+                    android:text="2. Who was the Darth Sidious' apprentice? Multiple choice question."
                     android:textColor="#fff" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/sidious_question"
-                    android:orientation="horizontal">
+                    style="@style/OverCheckBoxLinearLayout"
+                    android:layout_below="@id/sidious_question">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
+                        style="@style/ImageView"
                         android:src="@drawable/palp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/CheckBoxLinearLayout">
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:buttonTint="#fff"
-                            android:text="General Grievous"
-                            android:textColor="#fff" />
+                            style="@style/CheckBox2"
+                            android:text="General Grievous" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:buttonTint="#fff"
-                            android:text="Count Dooku "
-                            android:textColor="#fff"
-                            android:id="@+id/two_good_answearA"/>
+                            android:id="@+id/two_good_answerA"
+                            style="@style/CheckBox2"
+                            android:text="Count Dooku" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:buttonTint="#fff"
-                            android:text="Anakin Skywalker"
-                            android:textColor="#fff"
-                            android:id="@+id/two_good_answearB"/>
+                            android:id="@+id/two_good_answerB"
+                            style="@style/CheckBox2"
+                            android:text="Anakin Skywalker" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:buttonTint="#fff"
-                            android:text="Darth Maul"
-                            android:textColor="#fff"
-                            android:id="@+id/two_good_answearC"/>
+                            android:id="@+id/two_good_answerC"
+                            style="@style/CheckBox2"
+                            android:text="Darth Maul" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                style="@style/QuestionLayoutStyle"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    style="@style/QuestionTextView"
                     android:text="3. Which ship made the Kessel run in less than 12 parsecs?" />
 
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Ship's name"
-                    android:inputType="text"
-                    android:id="@+id/three_good_answear"/>
+                    android:id="@+id/three_good_answer"
+                    style="@style/EditText"
+                    android:hint="Ship's name" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -240,136 +181,97 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background"
-                android:elevation="4dp"
-                android:padding="16dp">
+            <RelativeLayout style="@style/QuestionLayoutStyle">
 
                 <TextView
                     android:id="@+id/old_republic_question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    style="@style/QuestionTextView"
                     android:text="4. How many years have passed since the age of Old Republic?" />
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/old_republic_question"
-                    android:orientation="horizontal">
+                    style="@style/RadioLinearLayout"
+                    android:layout_below="@id/old_republic_question">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
+                        style="@style/ImageView"
                         android:src="@drawable/malak" />
 
                     <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/RadioGroup"
                         android:layout_weight="1">
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="500 years"
-                            />
+                            style="@style/RadioButton"
+                            android:text="500 years" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/RadioButton"
                             android:text="10 000 years" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4 000 years"
-                            android:id="@+id/four_good_answear"/>
+                            android:id="@+id/four_good_answer"
+                            style="@style/RadioButton"
+                            android:text="4 000 years" />
 
                         <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/RadioButton"
                             android:text="20 years" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/shadow_background"
-                android:elevation="4dp"
-                android:padding="16dp"
-                >
+            <RelativeLayout style="@style/QuestionLayoutStyle">
 
                 <TextView
                     android:id="@+id/planets_question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="5. Who was Master Yoda's apprentice? More than one answer is correct."/>
+                    style="@style/QuestionTextView"
+                    android:text="5. Who was Master Yoda's apprentice? Multiple choice question." />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/planets_question"
-                    android:orientation="horizontal">
+                    style="@style/OverCheckBoxLinearLayout"
+                    android:layout_below="@id/planets_question">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/CheckBoxLinearLayout">
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Count Dooku"
-                            android:id="@+id/five_good_answearA"/>
+                            android:id="@+id/five_good_answerA"
+                            style="@style/CheckBox"
+                            android:text="Qui-Gon Jinn" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/CheckBox"
                             android:text="Obi-Wan Kenobi" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Luke Skywalker"
-                            android:id="@+id/five_good_answearB"/>
+                            android:id="@+id/five_good_answerB"
+                            style="@style/CheckBox"
+                            android:text="Luke Skywalker" />
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Qui-Gon Jinn"
-                            android:id="@+id/five_good_answearC"/>
+                            style="@style/CheckBox"
+                            android:text="Jar Jar Binks" />
+
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
+                        style="@style/ImageView"
                         android:src="@drawable/yoda" />
+
                 </LinearLayout>
+
             </RelativeLayout>
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="16dp"
-                android:text="Submit Answers"
-                android:textColor="#fff"
-                android:textAllCaps="true"
-                android:onClick="displayToast"/>
+                style="@style/ButtonStyle"
+                android:onClick="isNameThere"
+                android:text="Submit Answers" />
 
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>
