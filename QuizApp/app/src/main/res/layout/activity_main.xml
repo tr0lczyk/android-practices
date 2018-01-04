@@ -70,15 +70,18 @@
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/Tatooine" />
+                            android:text="@string/Tatooine"
+                            android:id="@+id/wrong_radio_four"/>
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/Naboo" />
+                            android:text="@string/Naboo"
+                            android:id="@+id/wrong_radio_five"/>
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/NarShaddaa" />
+                            android:text="@string/NarShaddaa"
+                            android:id="@+id/wrong_radio_six"/>
 
                     </RadioGroup>
 
@@ -109,7 +112,8 @@
 
                         <CheckBox
                             style="@style/CheckBox2"
-                            android:text="@string/General" />
+                            android:text="@string/General"
+                            android:id="@+id/bad_checkbox_one"/>
 
                         <CheckBox
                             android:id="@+id/two_good_answerA"
@@ -172,11 +176,13 @@
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/FiveYears" />
+                            android:text="@string/FiveYears"
+                            android:id="@+id/wrong_radio_one"/>
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/TenYears" />
+                            android:text="@string/TenYears"
+                            android:id="@+id/wrong_radio_two"/>
 
                         <RadioButton
                             android:id="@+id/four_good_answer"
@@ -185,7 +191,8 @@
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="@string/TwoYears" />
+                            android:text="@string/TwoYears"
+                            android:id="@+id/wrong_radio_three"/>
 
                     </RadioGroup>
 
@@ -213,7 +220,8 @@
 
                         <CheckBox
                             style="@style/CheckBox"
-                            android:text="@string/Kenobi" />
+                            android:text="@string/Kenobi"
+                            android:id="@+id/bad_checkbox_two"/>
 
                         <CheckBox
                             android:id="@+id/five_good_answerB"
@@ -222,7 +230,8 @@
 
                         <CheckBox
                             style="@style/CheckBox"
-                            android:text="@string/Binks" />
+                            android:text="@string/Binks"
+                            android:id="@+id/bad_checkbox_three"/>
 
                     </LinearLayout>
 
@@ -239,7 +248,13 @@
                 android:onClick="isNameThere"
                 android:text="@string/Submit" />
 
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="resetQuestions"
+                android:text="@string/Reset" />
+
         </LinearLayout>
+
 
     </LinearLayout>
 

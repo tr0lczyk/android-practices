@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     /*
     *
     * @method that return's the player name
@@ -38,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     *
     * */
     public int questionOne() {
-        RadioButton buttonCorrect = (RadioButton) findViewById(R.id.one_good_answer);
-        boolean oneGoodAnswer = buttonCorrect.isChecked();
+        RadioButton buttonCorrectOne = (RadioButton) findViewById(R.id.one_good_answer);
+        boolean oneGoodAnswer = buttonCorrectOne.isChecked();
         if (oneGoodAnswer) {
             return 1;
         } else {
@@ -53,12 +52,12 @@ public class MainActivity extends AppCompatActivity {
     *
     * */
     public int questionTwo() {
-        CheckBox checkBoxCorrectA = (CheckBox) findViewById(R.id.two_good_answerA);
-        boolean twoGoodAnswerA = checkBoxCorrectA.isChecked();
-        CheckBox checkBoxCorrectB = (CheckBox) findViewById(R.id.two_good_answerB);
-        boolean twoGoodAnswerB = checkBoxCorrectB.isChecked();
-        CheckBox checkBoxCorrectC = (CheckBox) findViewById(R.id.two_good_answerC);
-        boolean twoGoodAnswerC = checkBoxCorrectC.isChecked();
+        CheckBox checkBoxCorrectATwo = (CheckBox) findViewById(R.id.two_good_answerA);
+        boolean twoGoodAnswerA = checkBoxCorrectATwo.isChecked();
+        CheckBox checkBoxCorrectBTwo = (CheckBox) findViewById(R.id.two_good_answerB);
+        boolean twoGoodAnswerB = checkBoxCorrectBTwo.isChecked();
+        CheckBox checkBoxCorrectCTwo = (CheckBox) findViewById(R.id.two_good_answerC);
+        boolean twoGoodAnswerC = checkBoxCorrectCTwo.isChecked();
         if (twoGoodAnswerA && twoGoodAnswerB && twoGoodAnswerC) {
             return 1;
         } else {
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     public int questionThree() {
         EditText shipNameCorrect = (EditText) findViewById(R.id.three_good_answer);
         String threeGoodAnswer = shipNameCorrect.getText().toString().toLowerCase();
-        String falcon = "millenium falcon";
+        String falcon = getText(R.string.MilFal).toString();
         if (threeGoodAnswer.equals(falcon)) {
             return 1;
         } else {
@@ -88,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
     *
     * */
     public int questionFour() {
-        RadioButton buttonCorrect = (RadioButton) findViewById(R.id.four_good_answer);
-        boolean oneGoodAnswer = buttonCorrect.isChecked();
+        RadioButton buttonCorrectFour = (RadioButton) findViewById(R.id.four_good_answer);
+        boolean oneGoodAnswer = buttonCorrectFour.isChecked();
         if (oneGoodAnswer) {
             return 1;
         } else {
@@ -103,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
     *
     * */
     public int questionFive() {
-        CheckBox checkBoxCorrectA = (CheckBox) findViewById(R.id.five_good_answerA);
-        boolean fiveGoodAnswerA = checkBoxCorrectA.isChecked();
-        CheckBox checkBoxCorrectB = (CheckBox) findViewById(R.id.five_good_answerB);
-        boolean fiveGoodAnswerB = checkBoxCorrectB.isChecked();
+        CheckBox checkBoxCorrectAFive = (CheckBox) findViewById(R.id.five_good_answerA);
+        boolean fiveGoodAnswerA = checkBoxCorrectAFive.isChecked();
+        CheckBox checkBoxCorrectBFive = (CheckBox) findViewById(R.id.five_good_answerB);
+        boolean fiveGoodAnswerB = checkBoxCorrectBFive.isChecked();
         if (fiveGoodAnswerA && fiveGoodAnswerB) {
             return 1;
         } else {
@@ -125,6 +124,51 @@ public class MainActivity extends AppCompatActivity {
         return correctAnswers;
     }
 
+    /*
+    *
+    * @method that resets all of the answers
+    *
+    * */
+    public void resetQuestions(View view){
+
+//        GOOD ANSWERS
+        RadioButton buttonCorrectOne = (RadioButton) findViewById(R.id.one_good_answer);
+        buttonCorrectOne.setChecked(false);
+        CheckBox checkBoxCorrectATwo = (CheckBox) findViewById(R.id.two_good_answerA);
+        checkBoxCorrectATwo.setChecked(false);
+        CheckBox checkBoxCorrectBTwo = (CheckBox) findViewById(R.id.two_good_answerB);
+        checkBoxCorrectBTwo.setChecked(false);
+        CheckBox checkBoxCorrectCTwo = (CheckBox) findViewById(R.id.two_good_answerC);
+        checkBoxCorrectCTwo.setChecked(false);
+        EditText shipNameCorrect = (EditText) findViewById(R.id.three_good_answer);
+        shipNameCorrect.setText("");
+        RadioButton buttonCorrectFour = (RadioButton) findViewById(R.id.four_good_answer);
+        buttonCorrectFour.setChecked(false);
+        CheckBox checkBoxCorrectAFive = (CheckBox) findViewById(R.id.five_good_answerA);
+        checkBoxCorrectAFive.setChecked(false);
+        CheckBox checkBoxCorrectBFive = (CheckBox) findViewById(R.id.five_good_answerB);
+        checkBoxCorrectBFive.setChecked(false);
+
+//        WRONG ANSWERS
+        CheckBox checkBoxWrongOne = (CheckBox) findViewById(R.id.bad_checkbox_one);
+        checkBoxWrongOne.setChecked(false);
+        CheckBox checkBoxWrongTwo = (CheckBox) findViewById(R.id.bad_checkbox_two);
+        checkBoxWrongOne.setChecked(false);
+        CheckBox checkBoxWrongThree = (CheckBox) findViewById(R.id.bad_checkbox_three);
+        checkBoxWrongOne.setChecked(false);
+        RadioButton checkRadioButtonWrongOne = (RadioButton) findViewById(R.id.wrong_radio_one);
+        checkRadioButtonWrongOne.setChecked(false);
+        RadioButton checkRadioButtonWrongTwo = (RadioButton) findViewById(R.id.wrong_radio_two);
+        checkRadioButtonWrongTwo.setChecked(false);
+        RadioButton checkRadioButtonWrongThree = (RadioButton) findViewById(R.id.wrong_radio_three);
+        checkRadioButtonWrongThree.setChecked(false);
+        RadioButton checkRadioButtonWrongFour = (RadioButton) findViewById(R.id.wrong_radio_four);
+        checkRadioButtonWrongFour.setChecked(false);
+        RadioButton checkRadioButtonWrongFive = (RadioButton) findViewById(R.id.wrong_radio_five);
+        checkRadioButtonWrongFive.setChecked(false);
+        RadioButton checkRadioButtonWrongSix = (RadioButton) findViewById(R.id.wrong_radio_six);
+        checkRadioButtonWrongSix.setChecked(false);
+    }
 
     /*
     *
@@ -132,22 +176,13 @@ public class MainActivity extends AppCompatActivity {
     *
     * */
     public void isNameThere(View view){
-        String yourName = "Padawan, please state your name...";
+        String yourName = getString(R.string.StateName);
         if (playerName().equals("")) {
             Toast.makeText(this, yourName, Toast.LENGTH_LONG).show();
             return;
         } else {
             displayToast();
         }
-    }
-
-    public void createButton(){
-        ViewGroup linearLayout = (ViewGroup) findViewById(R.id.main_questions_layout);
-        Button resetButton = new Button(this);
-        resetButton.setText("Reset");
-        resetButton.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        resetButton.setGravity(Gravity.CENTER_HORIZONTAL);
-        linearLayout.addView(resetButton);
     }
 
     /*
@@ -157,12 +192,12 @@ public class MainActivity extends AppCompatActivity {
     * */
     public void displayToast() {
         int sumOfAnswers = sumOfQuestions(questionOne(), questionTwo(), questionThree(), questionFour(), questionFive());
-        String answerZero = playerName() + ", do. Or do not. There is no try. Your score is " + sumOfAnswers + " points...";
-        String answerOne = playerName() + ", I have a bad feelings about this... " + sumOfAnswers + "/5 question answered correctly.";
-        String answerTwo = "Not bad " + playerName() + "! " + sumOfAnswers + "/5 points! In my experience there is no such thing as luck.";
-        String answerThree = "Nice, " + playerName() + "! Your score is " + sumOfAnswers + "/5! Stay on target.";
-        String answerFour = "Great " + playerName() + ", " + "but don’t get cocky. " + sumOfAnswers + "/5 questions answered correctly!";
-        String answerFive = "Marvelous " + playerName() + ", your score is" + sumOfAnswers + "/5 ! The force is strong in you...";
+        String answerZero = playerName() + getString(R.string.Toast1) + sumOfAnswers + getString(R.string.Toast2);
+        String answerOne = playerName() + getString(R.string.Toast3) + sumOfAnswers + getString(R.string.Toast4);
+        String answerTwo = getString(R.string.Toast5) + playerName() + getString(R.string.Toast6) + sumOfAnswers + getString(R.string.Toast7);
+        String answerThree = getString(R.string.Toast8) + playerName() + getString(R.string.Toast9) + sumOfAnswers + getString(R.string.Toast10);
+        String answerFour = getString(R.string.Toast11) + playerName() + getString(R.string.Toast12) + sumOfAnswers + getString(R.string.Toast13);
+        String answerFive = getString(R.string.Toast14) + playerName() + getString(R.string.Toast15) + sumOfAnswers + getString(R.string.Toast16);
         if (sumOfAnswers == 0) {
             Toast.makeText(this, answerZero, Toast.LENGTH_LONG).show();
             return;
@@ -177,7 +212,6 @@ public class MainActivity extends AppCompatActivity {
         } else if (sumOfAnswers == 5) {
             Toast.makeText(this, answerFive, Toast.LENGTH_LONG).show();
         }
-        createButton();
     }
 }
 

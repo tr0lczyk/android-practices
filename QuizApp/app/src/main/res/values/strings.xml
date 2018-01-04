@@ -28,4 +28,23 @@
     <string name="Luke">Luke Skywalker</string>
     <string name="Binks">Jar Jar Binks</string>
     <string name="Submit">Submit Answers</string>
+    <string name="Reset">Reset</string>
+    <string name="MilFal">millenium falcon</string>
+    <string name="StateName">Padawan, please state your name</string>
+    <string name="Toast1">, do. Or do not. There is no try. Your score is\ </string>
+    <string name="Toast2">\ points</string>
+    <string name="Toast3">, I have a bad feelings about this.\ </string>
+    <string name="Toast4">/5 question answered correctly.</string>
+    <string name="Toast5">Not bad\ </string>
+    <string name="Toast6">!\ </string>
+    <string name="Toast7">/5 points ! In my experience there is no such thing as luck.</string>
+    <string name="Toast8">Nice\ </string>
+    <string name="Toast9">, but don’t get cocky.\ </string>
+    <string name="Toast10">/5 questions answered correctly!</string>
+    <string name="Toast11">Great\ </string>
+    <string name="Toast12">! Your score is\ </string>
+    <string name="Toast13">/5 ! Stay on target.</string>
+    <string name="Toast14">Outstanding\ </string>
+    <string name="Toast15">! Your score is\ </string>
+    <string name="Toast16">/5 ! THE FORCE IS STRONG IN YOU!</string>
 </resources>
