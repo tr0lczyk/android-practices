@@ -28,8 +28,8 @@
     <style name="CheckBox2" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#fff</item>
-        <item name="android:buttonTint">#fff</item>
+        <item name="android:textColor">@color/baseTextColor</item>
+        <item name="android:buttonTint">@color/baseTextColor</item>
     </style>
 
     <style name="ImageView" parent="AppTheme">
@@ -57,18 +57,35 @@
         <item name="android:padding">16dp</item>
     </style>
 
+    <style name="QuestionLayoutStyle3" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:background">@drawable/shadow_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
     <style name="QuestionTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">16dp</item>
     </style>
-    
+
+    <style name="QuestionTextView2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textColor">@color/baseTextColor</item>
+    </style>
+
     <style name="ButtonStyle" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textColor">#2719C7</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
@@ -98,4 +115,66 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:inputType">text</item>
     </style>
+
+    <style name="MainLinearLayout" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LogoImageView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/logo4</item>
+    </style>
+
+    <style name="LogoTextView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@color/logoTextViewColor</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:textColor">@color/baseTextColor</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MainQuestionLinearLayout" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@color/questionBackground</item>
+    </style>
+
+    <style name="PadawanTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="MessageTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <style name="FalconImageView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:src">@drawable/falcon</item>
+    </style>
+
+    <style name="LogoRelativeLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">200dp</item>
+    </style>
+
+
 </resources>

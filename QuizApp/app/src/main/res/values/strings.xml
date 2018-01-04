@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="LogoText">Star Wars Quiz</string>
+    <string name="Padawan">Padawan...</string>
+    <string name="Message">...you will participate in a trial that will test your guts and knowledge. Prepare for the questions (and answers!) from the deepest corners of the galaxy. May the force be with you!</string>
+    <string name="Name">What\'s your name?</string>
+    <string name="NameHint">state your name here</string>
+    <string name="QuestionOne">1. What is the home planet of admiral - It\'s a trap! - Ackbar?</string>
+    <string name="MonCala">Mon Cala</string>
+    <string name="Tatooine">Tatooine</string>
+    <string name="Naboo">Naboo</string>
+    <string name="NarShaddaa">Nar Shaddaa</string>
+    <string name="QuestionTwo">2. Who was the Darth Sidious\' apprentice? Multiple choice question.</string>
+    <string name="General">General Grievous</string>
+    <string name="Count">Count Dooku</string>
+    <string name="Anakin">Anakin Skywalker</string>
+    <string name="Maul">Darth Maul</string>
+    <string name="QuestionThree">3. Which ship made the Kessel run in less than 12 parsecs?</string>
+    <string name="ShipsName">Ship\'s name</string>
+    <string name="QuestionFour">4. How many years have passed since the age of Old Republic?</string>
+    <string name="FiveYears">500 years</string>
+    <string name="TenYears">10 000 years</string>
+    <string name="FourYears">4 000 years</string>
+    <string name="TwoYears">20 years</string>
+    <string name="QuestionFive">5. Who was Master Yoda\'s apprentice? Multiple choice question.</string>
+    <string name="Jinn">Qui-Gon Jinn</string>
+    <string name="Kenobi">Obi-Wan Kenobi</string>
+    <string name="Luke">Luke Skywalker</string>
+    <string name="Binks">Jar Jar Binks</string>
+    <string name="Submit">Submit Answers</string>
 </resources>

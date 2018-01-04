@@ -7,54 +7,31 @@
     tools:context="com.example.android.quizapp.MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        style="@style/MainLinearLayout">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="200dp">
+            style="@style/LogoRelativeLayout">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo4" />
+                style="@style/LogoImageView"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:background="#B3000000"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:paddingVertical="24dp"
-                android:text="Star Wars Quiz"
-                android:textColor="#fff"
-                android:textSize="45sp"
-                android:textStyle="bold" />
+                style="@style/LogoTextView"
+                android:text="@string/LogoText"/>
+
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#eeeeee"
-            android:orientation="vertical"
-            android:padding="16dp">
+            style="@style/MainQuestionLinearLayout"
+            android:id="@+id/main_questions_layout">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Padawan..."
-                android:textSize="34sp" />
+                style="@style/PadawanTextView"
+                android:text="@string/Padawan"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="16dp"
-                android:paddingTop="16dp"
-                android:text="...you will participate in a trial that will test your guts and knowledge. Prepare for the questions (and answers!) from the deepest corners of the galaxy. May the force be with you!" />
+                style="@style/MessageTextView"
+                android:text="@string/Message" />
 
             <LinearLayout
                 style="@style/QuestionLayoutStyle"
@@ -62,12 +39,12 @@
 
                 <TextView
                     style="@style/QuestionTextView"
-                    android:text="What's your name?" />
+                    android:text="@string/Name" />
 
                 <EditText
                     android:id="@+id/player_name"
                     style="@style/EditText"
-                    android:hint="player's name" />
+                    android:hint="@string/NameHint" />
 
             </LinearLayout>
 
@@ -76,7 +53,7 @@
                 <TextView
                     android:id="@+id/akbar_question"
                     style="@style/QuestionTextView"
-                    android:text="1. What is the home planet of admiral - It's a trap! - Ackbar?" />
+                    android:text="@string/QuestionOne" />
 
                 <LinearLayout
                     style="@style/RadioLinearLayout"
@@ -89,27 +66,24 @@
                         <RadioButton
                             android:id="@+id/one_good_answer"
                             style="@style/RadioButton"
-                            android:text="Mon Cala" />
+                            android:text="@string/MonCala" />
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="Tatooine" />
+                            android:text="@string/Tatooine" />
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="Naboo" />
+                            android:text="@string/Naboo" />
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="Nar Shaddaa" />
+                            android:text="@string/NarShaddaa" />
 
                     </RadioGroup>
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
+                        style="@style/ImageView"
                         android:src="@drawable/akbar" />
 
                 </LinearLayout>
@@ -120,9 +94,8 @@
 
                 <TextView
                     android:id="@+id/sidious_question"
-                    style="@style/QuestionTextView"
-                    android:text="2. Who was the Darth Sidious' apprentice? Multiple choice question."
-                    android:textColor="#fff" />
+                    style="@style/QuestionTextView2"
+                    android:text="@string/QuestionTwo" />
 
                 <LinearLayout
                     style="@style/OverCheckBoxLinearLayout"
@@ -136,22 +109,22 @@
 
                         <CheckBox
                             style="@style/CheckBox2"
-                            android:text="General Grievous" />
+                            android:text="@string/General" />
 
                         <CheckBox
                             android:id="@+id/two_good_answerA"
                             style="@style/CheckBox2"
-                            android:text="Count Dooku" />
+                            android:text="@string/Count" />
 
                         <CheckBox
                             android:id="@+id/two_good_answerB"
                             style="@style/CheckBox2"
-                            android:text="Anakin Skywalker" />
+                            android:text="@string/Anakin" />
 
                         <CheckBox
                             android:id="@+id/two_good_answerC"
                             style="@style/CheckBox2"
-                            android:text="Darth Maul" />
+                            android:text="@string/Maul" />
 
                     </LinearLayout>
 
@@ -160,23 +133,20 @@
             </RelativeLayout>
 
             <LinearLayout
-                style="@style/QuestionLayoutStyle"
-                android:orientation="vertical">
+                style="@style/QuestionLayoutStyle3">
 
                 <TextView
                     style="@style/QuestionTextView"
-                    android:text="3. Which ship made the Kessel run in less than 12 parsecs?" />
+                    android:text="@string/QuestionThree" />
 
 
                 <EditText
                     android:id="@+id/three_good_answer"
                     style="@style/EditText"
-                    android:hint="Ship's name" />
+                    android:hint="@string/ShipsName"/>
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/falcon" />
+                    style="@style/FalconImageView"/>
 
             </LinearLayout>
 
@@ -185,7 +155,7 @@
                 <TextView
                     android:id="@+id/old_republic_question"
                     style="@style/QuestionTextView"
-                    android:text="4. How many years have passed since the age of Old Republic?" />
+                    android:text="@string/QuestionFour" />
 
 
                 <LinearLayout
@@ -202,20 +172,20 @@
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="500 years" />
+                            android:text="@string/FiveYears" />
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="10 000 years" />
+                            android:text="@string/TenYears" />
 
                         <RadioButton
                             android:id="@+id/four_good_answer"
                             style="@style/RadioButton"
-                            android:text="4 000 years" />
+                            android:text="@string/FourYears" />
 
                         <RadioButton
                             style="@style/RadioButton"
-                            android:text="20 years" />
+                            android:text="@string/TwoYears" />
 
                     </RadioGroup>
 
@@ -228,7 +198,7 @@
                 <TextView
                     android:id="@+id/planets_question"
                     style="@style/QuestionTextView"
-                    android:text="5. Who was Master Yoda's apprentice? Multiple choice question." />
+                    android:text="@string/QuestionFive" />
 
                 <LinearLayout
                     style="@style/OverCheckBoxLinearLayout"
@@ -239,20 +209,20 @@
                         <CheckBox
                             android:id="@+id/five_good_answerA"
                             style="@style/CheckBox"
-                            android:text="Qui-Gon Jinn" />
+                            android:text="@string/Jinn" />
 
                         <CheckBox
                             style="@style/CheckBox"
-                            android:text="Obi-Wan Kenobi" />
+                            android:text="@string/Kenobi" />
 
                         <CheckBox
                             android:id="@+id/five_good_answerB"
                             style="@style/CheckBox"
-                            android:text="Luke Skywalker" />
+                            android:text="@string/Luke" />
 
                         <CheckBox
                             style="@style/CheckBox"
-                            android:text="Jar Jar Binks" />
+                            android:text="@string/Binks" />
 
                     </LinearLayout>
 
@@ -267,7 +237,7 @@
             <Button
                 style="@style/ButtonStyle"
                 android:onClick="isNameThere"
-                android:text="Submit Answers" />
+                android:text="@string/Submit" />
 
         </LinearLayout>
 

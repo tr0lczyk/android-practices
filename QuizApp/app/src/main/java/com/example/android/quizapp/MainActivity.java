@@ -2,7 +2,10 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -138,6 +141,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void createButton(){
+        ViewGroup linearLayout = (ViewGroup) findViewById(R.id.main_questions_layout);
+        Button resetButton = new Button(this);
+        resetButton.setText("Reset");
+        resetButton.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        resetButton.setGravity(Gravity.CENTER_HORIZONTAL);
+        linearLayout.addView(resetButton);
+    }
+
     /*
     *
     * @method that displays a different toast message, based on the number of correct answers
@@ -153,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         String answerFive = "Marvelous " + playerName() + ", your score is" + sumOfAnswers + "/5 ! The force is strong in you...";
         if (sumOfAnswers == 0) {
             Toast.makeText(this, answerZero, Toast.LENGTH_LONG).show();
+            return;
         } else if (sumOfAnswers == 1) {
             Toast.makeText(this, answerOne, Toast.LENGTH_LONG).show();
         } else if (sumOfAnswers == 2) {
@@ -164,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (sumOfAnswers == 5) {
             Toast.makeText(this, answerFive, Toast.LENGTH_LONG).show();
         }
+        createButton();
     }
 }
 
