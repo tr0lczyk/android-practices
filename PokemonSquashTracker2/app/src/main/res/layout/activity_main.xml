@@ -117,7 +117,7 @@
 
         </RelativeLayout>
 
-        <android.support.constraint.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3">
@@ -128,28 +128,40 @@
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 android:src="@drawable/charizard2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158" />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"/>
 
 
             <ImageView
                 android:layout_width="174dp"
                 android:layout_height="174dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
                 android:scaleX="1.2"
                 android:scaleY="1.2"
                 android:src="@drawable/blastoise2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:layout_marginBottom="10dp"/>
 
-        </android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:layout_width="174dp"
+                android:layout_height="174dp"
+                android:src="@drawable/fire"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="174dp"
+                android:layout_height="169dp"
+                android:src="@drawable/water4"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
