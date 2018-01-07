@@ -36,11 +36,11 @@
                 android:layout_height="wrap_content"
                 android:text="Player RED"
                 android:textAllCaps="true"
-                android:textColor="#000"
+                android:textColor="@color/red"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/player_red"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="4dp"/>
 
             <TextView
@@ -77,19 +77,19 @@
                 android:textSize="18sp"
                 android:textAllCaps="true"
                 android:layout_below="@id/red_progress_bar"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 android:gravity="center_vertical"
                 android:textColor="@color/black"
-                android:id="@+id/games_won"/>
+                android:id="@+id/games_won_red"/>
 
             <TextView
                 android:id="@+id/red_match_score"
                 android:layout_width="24dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/red_progress_bar"
-                android:layout_toEndOf="@+id/games_won"
-                android:layout_toRightOf="@+id/games_won"
-                android:gravity="center_vertical"
+                android:layout_toEndOf="@+id/games_won_red"
+                android:layout_toRightOf="@+id/games_won_red"
+                android:gravity="center"
                 android:text="@string/zero"
                 android:textColor="@color/black"
                 android:textSize="26sp" />
@@ -102,6 +102,7 @@
                 android:textSize="65sp"
                 android:textColor="@color/black"
                 android:gravity="center"
+                android:layout_marginRight="30dp"
                 android:id="@+id/red_score"/>
 
             <TextView
@@ -110,7 +111,9 @@
                 android:layout_toLeftOf="@id/red_score"
                 android:text="@string/score"
                 android:gravity="center_vertical"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
         </RelativeLayout>
 
@@ -148,7 +151,7 @@
 
         </android.support.constraint.ConstraintLayout>
 
-        <android.support.constraint.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
@@ -157,41 +160,91 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
                 android:text="Player blue"
                 android:textAllCaps="true"
-                android:textColor="#000"
+                android:textColor="@color/blue"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/player_blue"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/textViewHpBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:layout_marginLeft="24dp"
+                android:layout_alignLeft="@+id/player_blue"
+                android:layout_alignStart="@+id/player_blue"
+                android:layout_below="@+id/player_blue"
                 android:text="hp:"
                 android:textAllCaps="true"
                 android:textColor="#000"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                android:textSize="16sp" />
 
             <ProgressBar
                 android:id="@+id/blue_progress_bar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="124dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/player_blue"
+                android:layout_alignRight="@+id/player_blue"
+                android:layout_below="@id/player_blue"
+                android:layout_toRightOf="@id/textViewHpBlue"
+                android:gravity="center_vertical"
                 android:indeterminate="false"
                 android:max="110"
-                android:progress="110"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:padding="3dp"
+                android:progress="110" />
 
-        </android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="127dp"
+                android:layout_height="36dp"
+                android:text="Games WON: "
+                android:textSize="18sp"
+                android:textAllCaps="true"
+                android:layout_below="@id/blue_progress_bar"
+                android:layout_toLeftOf="@id/blue_match_score"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:id="@+id/games_won"/>
+
+            <TextView
+                android:id="@+id/blue_match_score"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/blue_progress_bar"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/blue_score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/score_view"
+                android:layout_toRightOf="@+id/score_view"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="65sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/score"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:id="@+id/score_view"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
