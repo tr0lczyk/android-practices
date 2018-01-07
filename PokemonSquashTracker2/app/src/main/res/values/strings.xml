@@ -2,7 +2,7 @@
     <string name="app_name">Pokemon Squash Tracker 2</string>
     <string name="red">red</string>
     <string name="hp">HP:</string>
-    <string name="games_won">games won:</string>
+    <string name="games_won">games won:\ </string>
     <string name="zero">0</string>
     <string name="score">score</string>
     <string name="blue">blue</string>

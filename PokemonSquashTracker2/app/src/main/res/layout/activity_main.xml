@@ -47,24 +47,70 @@
                 android:id="@+id/textViewHpRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/player_red"
+                android:layout_alignStart="@+id/player_red"
+                android:layout_below="@+id/player_red"
                 android:text="hp:"
                 android:textAllCaps="true"
                 android:textColor="#000"
-                android:textSize="16sp"
-                android:layout_below="@id/player_red"
-                android:layout_marginLeft="40dp"/>
+                android:textSize="16sp" />
 
             <ProgressBar
                 android:id="@+id/red_progress_bar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:indeterminate="false"
-                android:max="110"
-                android:progress="110"
+                android:layout_alignEnd="@+id/player_red"
+                android:layout_alignRight="@+id/player_red"
                 android:layout_below="@id/player_red"
                 android:layout_toRightOf="@id/textViewHpRed"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:indeterminate="false"
+                android:max="110"
+                android:padding="3dp"
+                android:progress="110" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Games WON: "
+                android:textSize="18sp"
+                android:textAllCaps="true"
+                android:layout_below="@id/red_progress_bar"
+                android:layout_marginLeft="40dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:id="@+id/games_won"/>
+
+            <TextView
+                android:id="@+id/red_match_score"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/red_progress_bar"
+                android:layout_toEndOf="@+id/games_won"
+                android:layout_toRightOf="@+id/games_won"
+                android:gravity="center_vertical"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/zero"
+                android:layout_alignParentRight="true"
+                android:textSize="65sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/red_score"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/red_score"
+                android:text="@string/score"
+                android:gravity="center_vertical"
+                android:textAllCaps="true" />
 
         </RelativeLayout>
 
@@ -74,8 +120,8 @@
             android:layout_weight="3">
 
             <ImageView
-                android:layout_width="178dp"
-                android:layout_height="173dp"
+                android:layout_width="184dp"
+                android:layout_height="179dp"
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 android:src="@drawable/charizard2"
@@ -84,12 +130,12 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.252" />
+                app:layout_constraintVertical_bias="0.158" />
 
 
             <ImageView
-                android:layout_width="166dp"
-                android:layout_height="165dp"
+                android:layout_width="174dp"
+                android:layout_height="174dp"
                 android:scaleX="1.2"
                 android:scaleY="1.2"
                 android:src="@drawable/blastoise2"
@@ -98,7 +144,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="1.0" />
 
         </android.support.constraint.ConstraintLayout>
 
