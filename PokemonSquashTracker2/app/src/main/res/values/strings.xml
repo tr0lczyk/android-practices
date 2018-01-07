@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pokemon Squash Tracker 2</string>
+    <string name="red">red</string>
+    <string name="hp">HP:</string>
+    <string name="games_won">games won:</string>
+    <string name="zero">0</string>
+    <string name="score">score</string>
+    <string name="blue">blue</string>
+    <string name="red_1">red +1</string>
+    <string name="rematch">rematch</string>
+    <string name="blue_1">blue +1</string>
+    <string name="astonish_victory">! ASTONISHING VICTORY!!!!</string>
+    <string name="colon">:</string>
+    <string name="red_wins_game">PLAYER RED WINS THE GAME</string>
+    <string name="blue_wins_game">PLAYER BLUE WINS THE GAME</string>
+    <string name="red_won_match">PLAYER RED WON MATCH\ </string>
+    <string name="blue_won_match">PLAYER BLUE WON MATCH\ </string>
+
+</resources>
