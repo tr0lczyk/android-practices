@@ -4,7 +4,7 @@
     <string name="hp">HP:</string>
     <string name="games_won">games won:\ </string>
     <string name="zero">0</string>
-    <string name="score">score:\ </string>
+    <string name="score">score:</string>
     <string name="blue">blue</string>
     <string name="red_1">red +1</string>
     <string name="rematch">rematch</string>

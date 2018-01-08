@@ -95,15 +95,17 @@
                 android:textSize="26sp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/red_score"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
-                android:text="@string/zero"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:textSize="65sp"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:text="@string/zero"
                 android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_marginRight="30dp"
-                android:id="@+id/red_score"/>
+                android:textSize="65sp"
+                android:layout_marginRight="8dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -113,7 +115,8 @@
                 android:gravity="center_vertical"
                 android:textAllCaps="true"
                 android:textSize="30sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"/>
 
         </RelativeLayout>
 
@@ -123,14 +126,15 @@
             android:layout_weight="3">
 
             <ImageView
+                android:id="@+id/charizard_image"
                 android:layout_width="184dp"
                 android:layout_height="179dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="19dp"
                 android:scaleX="1.1"
                 android:scaleY="1.1"
-                android:src="@drawable/charizard2"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"/>
+                android:src="@drawable/charizard2" />
 
 
             <ImageView
@@ -141,7 +145,8 @@
                 android:scaleX="1.2"
                 android:scaleY="1.2"
                 android:src="@drawable/blastoise2"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:id="@+id/blastoise_image"/>
 
             <ImageView
                 android:layout_width="174dp"
@@ -150,16 +155,18 @@
                 android:visibility="gone"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:id="@+id/fire_wave"/>
 
             <ImageView
                 android:layout_width="174dp"
                 android:layout_height="169dp"
-                android:src="@drawable/water4"
+                android:src="@drawable/water7"
                 android:visibility="gone"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:id="@+id/water_wave"/>
 
         </RelativeLayout>
 
@@ -179,16 +186,16 @@
                 android:textStyle="bold"
                 android:id="@+id/player_blue"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/textViewHpBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/player_blue"
-                android:layout_alignStart="@+id/player_blue"
-                android:layout_below="@+id/player_blue"
+                android:layout_alignLeft="@id/player_blue"
+                android:layout_alignStart="@id/player_blue"
+                android:layout_below="@id/player_blue"
                 android:text="hp:"
                 android:textAllCaps="true"
                 android:textColor="#000"
@@ -199,8 +206,8 @@
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/player_blue"
-                android:layout_alignRight="@+id/player_blue"
+                android:layout_alignEnd="@id/player_blue"
+                android:layout_alignRight="@id/player_blue"
                 android:layout_below="@id/player_blue"
                 android:layout_toRightOf="@id/textViewHpBlue"
                 android:gravity="center_vertical"
@@ -225,22 +232,22 @@
                 android:id="@+id/blue_match_score"
                 android:layout_width="24dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/blue_progress_bar"
+                android:layout_below="@id/blue_progress_bar"
                 android:layout_alignParentRight="true"
                 android:gravity="center"
                 android:text="@string/zero"
                 android:textColor="@color/black"
                 android:textSize="26sp"
-                android:layout_marginRight="25dp"/>
+                android:layout_marginRight="30dp"/>
 
             <TextView
                 android:id="@+id/blue_score"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/score_view"
-                android:layout_toRightOf="@+id/score_view"
-                android:gravity="center"
+                android:layout_toEndOf="@id/score_view"
+                android:layout_toRightOf="@id/score_view"
+                android:gravity="center_vertical"
                 android:text="@string/zero"
                 android:textColor="@color/black"
                 android:textSize="65sp" />
@@ -254,7 +261,8 @@
                 android:textSize="30sp"
                 android:textColor="@color/black"
                 android:id="@+id/score_view"
-                android:layout_marginLeft="25dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"/>
 
         </RelativeLayout>
 
@@ -271,6 +279,7 @@
                 android:layout_marginLeft="16dp"
                 android:onClick="plusOneRed"
                 android:text="Red +1"
+                android:textColor="@color/red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/rematch_button"
@@ -294,6 +303,7 @@
                 android:layout_marginRight="16dp"
                 android:onClick="plusOneBlue"
                 android:text="blue +1"
+                android:textColor="@color/blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/rematch_button"
                 app:layout_constraintRight_toRightOf="parent"
