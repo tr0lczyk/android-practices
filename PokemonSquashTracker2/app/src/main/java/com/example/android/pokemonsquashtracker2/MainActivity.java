@@ -27,6 +27,11 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*
+    * @Global Variables
+    *
+    * */
+
     ProgressBar prgR;
     ProgressBar prgB;
 
@@ -49,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        blastoise =  findViewById(R.id.blastoise_image);
-        charizard =  findViewById(R.id.charizard_image);
-        blastoiseAttack =  findViewById(R.id.water_wave);
-        charizardAttack =  findViewById(R.id.fire_wave);
+        blastoise = findViewById(R.id.blastoise_image);
+        charizard = findViewById(R.id.charizard_image);
+        blastoiseAttack = findViewById(R.id.water_wave);
+        charizardAttack = findViewById(R.id.fire_wave);
 
         blastoiseFloat = AnimationUtils.loadAnimation(this, R.anim.blastoisefloat);
         charizardFloat = AnimationUtils.loadAnimation(this, R.anim.charizardfloat);
@@ -60,29 +65,54 @@ public class MainActivity extends AppCompatActivity {
         blastoise.startAnimation(blastoiseFloat);
         charizard.startAnimation(charizardFloat);
 
-        prgR =  findViewById(R.id.red_progress_bar);
-        prgB =  findViewById(R.id.blue_progress_bar);
+        prgR = findViewById(R.id.red_progress_bar);
+        prgB = findViewById(R.id.blue_progress_bar);
     }
+
+    /*
+    * @method that displays Red player match score
+    *
+    * */
 
     public void displayMatchScoreR(int score) {
-        TextView matchView = (TextView) findViewById(R.id.red_match_score);
+        TextView matchView = findViewById(R.id.red_match_score);
         matchView.setText(String.valueOf(score));
     }
+
+    /*
+    * @method that displays Blue player match score
+    *
+    * */
 
     public void displayMatchScoreB(int score) {
-        TextView matchView = (TextView) findViewById(R.id.blue_match_score);
+        TextView matchView = findViewById(R.id.blue_match_score);
         matchView.setText(String.valueOf(score));
     }
 
+    /*
+    * @method that displays Red player game score
+    *
+    * */
+
     public void displayScoreR(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.red_score);
+        TextView scoreView = findViewById(R.id.red_score);
         scoreView.setText(String.valueOf(score));
     }
 
+    /*
+    * @method that displays Blue player game score
+    *
+    * */
+
     public void displayScoreB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.blue_score);
+        TextView scoreView = findViewById(R.id.blue_score);
         scoreView.setText(String.valueOf(score));
     }
+
+    /*
+    * @method that resets whole match and every game
+    *
+    * */
 
     public void resetFunction() {
         prgR.setProgress(110);
@@ -97,6 +127,11 @@ public class MainActivity extends AppCompatActivity {
         displayMatchScoreB(blueMatchScore);
     }
 
+    /*
+    * @method that resets last game
+    *
+    * */
+
     public void gameResetFunction() {
         prgR.setProgress(110);
         prgB.setProgress(110);
@@ -106,9 +141,19 @@ public class MainActivity extends AppCompatActivity {
         displayScoreB(blueScore);
     }
 
+    /*
+    * @method that connects the button to the resetFunction
+    *
+    * */
+
     public void resetButton(View view) {
         resetFunction();
     }
+
+    /*
+    * Animation of the Blastoise attack
+    *
+    * */
 
     public void blueAttacks() {
         blastoiseAttack.setVisibility(View.VISIBLE);
@@ -120,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    * Animation of the Charizard attack
+    *
+    * */
+
     public void redAttacks() {
         charizardAttack.setVisibility(View.VISIBLE);
         charizardAttack.animate().alpha(1.0f).setDuration(200).withEndAction(new Runnable() {
@@ -129,6 +179,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    * @method that adding 1 point for the red player, displaying the score of games and matches and commencing attack
+    *
+    * */
 
     public void plusOneRed(View view) {
         redAttacks();
@@ -153,6 +208,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /*
+    * @method that adding 1 point for the blue player, displaying the score of games and matches and commencing attack
+    *
+    * */
 
     public void plusOneBlue(View view) {
         blueAttacks();
