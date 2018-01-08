@@ -15,5 +15,10 @@
     <string name="blue_wins_game">PLAYER BLUE WINS THE GAME</string>
     <string name="red_won_match">PLAYER RED WON MATCH\ </string>
     <string name="blue_won_match">PLAYER BLUE WON MATCH\ </string>
+    <string name="image_of_blastoise">Image of blastoise</string>
+    <string name="image_of_charizard">Image of charizard</string>
+    <string name="image_of_fire_attack">image of fire attack</string>
+    <string name="image_of_water_attack">image of water attack</string>
+    <string name="Background">background of the 2 monster\'s fight</string>
 
 </resources>

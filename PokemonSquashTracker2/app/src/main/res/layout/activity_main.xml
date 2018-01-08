@@ -1,313 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.pokemonsquashtracker2.MainActivity">
+    tools:context="com.example.android.pokemonsquashtracker2.MainActivity"
+    style="@style/MainConstraint">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/grass2"/>
+        android:src="@drawable/grass2"
+        style="@style/ImageViewBackground"
+        android:contentDescription="@string/Background"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/MainLinear">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:background="@drawable/rectangle2">
+            style="@style/MainRelative">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player RED"
-                android:textAllCaps="true"
-                android:textColor="@color/red"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:id="@+id/player_red"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="4dp"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                style="@style/BlueConstraint">
 
-            <TextView
-                android:id="@+id/textViewHpRed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/player_red"
-                android:layout_alignStart="@+id/player_red"
-                android:layout_below="@+id/player_red"
-                android:text="hp:"
-                android:textAllCaps="true"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/player_blue"
+                    android:text="@string/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/blue_progress_bar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    style="@style/BluePlayer" />
 
-            <ProgressBar
-                android:id="@+id/red_progress_bar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/player_red"
-                android:layout_alignRight="@+id/player_red"
-                android:layout_below="@id/player_red"
-                android:layout_toRightOf="@id/textViewHpRed"
-                android:gravity="center_vertical"
-                android:indeterminate="false"
-                android:max="110"
-                android:padding="3dp"
-                android:progress="110" />
+                <TextView
+                    android:id="@+id/textViewHpRed"
+                    android:text="@string/hp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/blue_progress_bar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/BlueHp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="Games WON: "
-                android:textSize="18sp"
-                android:textAllCaps="true"
-                android:layout_below="@id/red_progress_bar"
-                android:layout_marginLeft="30dp"
-                android:gravity="center_vertical"
-                android:textColor="@color/black"
-                android:id="@+id/games_won_red"/>
+                <ProgressBar
+                    android:id="@+id/blue_progress_bar"
+                    style="@style/BlueProgress"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/red_match_score"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/red_progress_bar"
-                android:layout_toEndOf="@+id/games_won_red"
-                android:layout_toRightOf="@+id/games_won_red"
-                android:gravity="center"
-                android:text="@string/zero"
-                android:textColor="@color/black"
-                android:textSize="26sp" />
+                <TextView
+                    android:id="@+id/games_won_blue"
+                    android:text="@string/games_won"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/blue_progress_bar"
+                    app:layout_constraintStart_toStartOf="@+id/textViewHpRed"
+                    app:layout_constraintTop_toBottomOf="@+id/blue_progress_bar"
+                    style="@style/BlueGames" />
 
-            <TextView
-                android:id="@+id/red_score"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:gravity="center_vertical"
-                android:text="@string/zero"
-                android:textColor="@color/black"
-                android:textSize="65sp"
-                android:layout_marginRight="8dp"/>
+                <TextView
+                    android:id="@+id/blue_match_score"
+                    android:text="@string/zero"
+                    app:layout_constraintBottom_toBottomOf="@+id/games_won_blue"
+                    app:layout_constraintStart_toEndOf="@+id/blue_progress_bar"
+                    app:layout_constraintTop_toTopOf="@+id/blue_progress_bar"
+                    style="@style/BlueMatchScore" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_toLeftOf="@id/red_score"
-                android:text="@string/score"
-                android:gravity="center_vertical"
-                android:textAllCaps="true"
-                android:textSize="30sp"
-                android:textColor="@color/black"
-                android:layout_marginRight="10dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                style="@style/RedConstraint">
+
+                <TextView
+                    android:id="@+id/player_red"
+                    android:text="@string/red"
+                    app:layout_constraintBottom_toTopOf="@+id/red_progress_bar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/RedPlayer" />
+
+                <TextView
+                    android:id="@+id/textViewHpBlue"
+                    android:text="@string/hp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/red_progress_bar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/RedHp" />
+
+                <ProgressBar
+                    android:id="@+id/red_progress_bar"
+                    style="@style/RedProgress"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.628"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/games_won"
+                    android:text="@string/games_won"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/red_progress_bar"
+                    app:layout_constraintStart_toStartOf="@+id/textViewHpBlue"
+                    app:layout_constraintTop_toBottomOf="@+id/red_progress_bar"
+                    style="@style/RedGames" />
+
+                <TextView
+                    android:id="@+id/red_match_score"
+                    android:text="@string/zero"
+                    app:layout_constraintBottom_toBottomOf="@+id/games_won"
+                    app:layout_constraintStart_toEndOf="@+id/red_progress_bar"
+                    app:layout_constraintTop_toTopOf="@+id/red_progress_bar"
+                    style="@style/RedMatchScore" />
+
+            </android.support.constraint.ConstraintLayout>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3">
+        <RelativeLayout style="@style/RelativeBattlefield">
+
+
+            <ImageView
+                android:id="@+id/blastoise_image"
+                android:src="@drawable/blastoise2"
+                style="@style/BlastoiseStyle" />
 
             <ImageView
                 android:id="@+id/charizard_image"
-                android:layout_width="184dp"
-                android:layout_height="179dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="19dp"
-                android:scaleX="1.1"
-                android:scaleY="1.1"
-                android:src="@drawable/charizard2" />
-
+                android:src="@drawable/charizard2"
+                style="@style/CharizardStyle" />
 
             <ImageView
-                android:layout_width="174dp"
-                android:layout_height="174dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:scaleX="1.2"
-                android:scaleY="1.2"
-                android:src="@drawable/blastoise2"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/blastoise_image"/>
-
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="174dp"
+                android:id="@+id/fire_wave"
                 android:src="@drawable/fire"
-                android:visibility="gone"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/fire_wave"/>
+                style="@style/FireAttack" />
 
             <ImageView
-                android:layout_width="174dp"
-                android:layout_height="169dp"
+                android:id="@+id/water_wave"
                 android:src="@drawable/water7"
-                android:visibility="gone"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/water_wave"/>
+                style="@style/WaterAttack" />
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:background="@drawable/rectangle2">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player blue"
-                android:textAllCaps="true"
-                android:textColor="@color/blue"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:id="@+id/player_blue"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:id="@+id/textViewHpBlue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/player_blue"
-                android:layout_alignStart="@id/player_blue"
-                android:layout_below="@id/player_blue"
-                android:text="hp:"
-                android:textAllCaps="true"
-                android:textColor="#000"
-                android:textSize="16sp" />
-
-            <ProgressBar
-                android:id="@+id/blue_progress_bar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@id/player_blue"
-                android:layout_alignRight="@id/player_blue"
-                android:layout_below="@id/player_blue"
-                android:layout_toRightOf="@id/textViewHpBlue"
-                android:gravity="center_vertical"
-                android:indeterminate="false"
-                android:max="110"
-                android:padding="3dp"
-                android:progress="110" />
-
-            <TextView
-                android:layout_width="127dp"
-                android:layout_height="36dp"
-                android:text="Games WON: "
-                android:textSize="18sp"
-                android:textAllCaps="true"
-                android:layout_below="@id/blue_progress_bar"
-                android:layout_toLeftOf="@id/blue_match_score"
-                android:gravity="center_vertical"
-                android:textColor="@color/black"
-                android:id="@+id/games_won"/>
-
-            <TextView
-                android:id="@+id/blue_match_score"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/blue_progress_bar"
-                android:layout_alignParentRight="true"
-                android:gravity="center"
-                android:text="@string/zero"
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                android:layout_marginRight="30dp"/>
+        <android.support.constraint.ConstraintLayout style="@style/ScoreLayout">
 
             <TextView
                 android:id="@+id/blue_score"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@id/score_view"
-                android:layout_toRightOf="@id/score_view"
-                android:gravity="center_vertical"
                 android:text="@string/zero"
-                android:textColor="@color/black"
-                android:textSize="65sp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/RedScore" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/score"
-                android:gravity="center_vertical"
-                android:textAllCaps="true"
-                android:textSize="30sp"
-                android:textColor="@color/black"
-                android:id="@+id/score_view"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"/>
-
-        </RelativeLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:background="@drawable/rectangle">
-
-            <Button
-                android:id="@+id/red_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:onClick="plusOneRed"
-                android:text="Red +1"
-                android:textColor="@color/red"
+                android:id="@+id/textView"
+                android:text=":"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/rematch_button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/Colon" />
 
-            <Button
-                android:id="@+id/rematch_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="resetButton"
-                android:text="rematch"
+            <TextView
+                android:id="@+id/red_score"
+                android:text="@string/zero"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/BlueScore" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout style="@style/ButtonsLayout">
 
             <Button
                 android:id="@+id/blue_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
                 android:onClick="plusOneBlue"
-                android:text="blue +1"
-                android:textColor="@color/blue"
+                android:text="@string/blue_1"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rematch_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/rematch_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/BlueButton" />
+
+            <Button
+                android:id="@+id/rematch_button"
+                android:onClick="resetButton"
+                android:text="@string/rematch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/ResetButton" />
+
+            <Button
+                android:id="@+id/red_button"
+                android:onClick="plusOneRed"
+                android:text="@string/red_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/rematch_button"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/rematch_button"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/RedButton" />
 
 
         </android.support.constraint.ConstraintLayout>

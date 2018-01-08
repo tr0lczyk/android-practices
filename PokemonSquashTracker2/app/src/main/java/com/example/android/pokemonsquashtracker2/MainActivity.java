@@ -43,21 +43,25 @@ public class MainActivity extends AppCompatActivity {
     Animation blastoiseFloat;
     Animation charizardFloat;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        blastoise = (ImageView) findViewById(R.id.blastoise_image);
-        charizard = (ImageView) findViewById(R.id.charizard_image);
-        blastoiseAttack = (ImageView) findViewById(R.id.water_wave);
-        charizardAttack = (ImageView) findViewById(R.id.fire_wave);
+        blastoise =  findViewById(R.id.blastoise_image);
+        charizard =  findViewById(R.id.charizard_image);
+        blastoiseAttack =  findViewById(R.id.water_wave);
+        charizardAttack =  findViewById(R.id.fire_wave);
 
         blastoiseFloat = AnimationUtils.loadAnimation(this, R.anim.blastoisefloat);
         charizardFloat = AnimationUtils.loadAnimation(this, R.anim.charizardfloat);
 
         blastoise.startAnimation(blastoiseFloat);
         charizard.startAnimation(charizardFloat);
+
+        prgR =  findViewById(R.id.red_progress_bar);
+        prgB =  findViewById(R.id.blue_progress_bar);
     }
 
     public void displayMatchScoreR(int score) {
@@ -81,9 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetFunction() {
-        prgR = (ProgressBar) findViewById(R.id.red_progress_bar);
         prgR.setProgress(110);
-        prgB = (ProgressBar) findViewById(R.id.blue_progress_bar);
         prgB.setProgress(110);
         redScore = 0;
         displayScoreR(redScore);
@@ -96,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gameResetFunction() {
-        prgR = (ProgressBar) findViewById(R.id.red_progress_bar);
         prgR.setProgress(110);
-        prgB = (ProgressBar) findViewById(R.id.blue_progress_bar);
         prgB.setProgress(110);
         redScore = 0;
         displayScoreR(redScore);
@@ -132,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void plusOneRed(View view) {
         redAttacks();
-        prgB = (ProgressBar) findViewById(R.id.blue_progress_bar);
         prgB.incrementProgressBy(-10);
         redScore += 1;
         displayScoreR(redScore);
@@ -157,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void plusOneBlue(View view) {
         blueAttacks();
-        prgR = (ProgressBar) findViewById(R.id.red_progress_bar);
         prgR.incrementProgressBy(-10);
         blueScore += 1;
         displayScoreB(blueScore);

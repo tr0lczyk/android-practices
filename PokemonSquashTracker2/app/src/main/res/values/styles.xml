@@ -8,24 +8,252 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ButtonOne" parent="AppTheme">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/red</item>
-        <item name="android:textAllCaps">true</item>
+    <style name="ImageViewBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 
-    <style name="ButtonTwo" parent="AppTheme">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAllCaps">true</item>
+    <style name="MainLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">4dp</item>
     </style>
 
-    <style name="ButtonThree" parent="AppTheme">
+    <style name="MainRelative">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">5</item>
+    </style>
+
+    <style name="BlueConstraint">
+        <item name="android:layout_width">175dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/rectangle2</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="RedConstraint">
+        <item name="android:layout_width">175dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/rectangle2</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="RelativeBattlefield">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">2.7</item>
+    </style>
+
+    <style name="ButtonsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:background">@drawable/rectangle</item>
+    </style>
+
+    <style name="BlueButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
         <item name="android:textColor">@color/blue</item>
-        <item name="android:textAllCaps">true</item>
     </style>
+
+    <style name="ResetButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="ScoreLayout">
+        <item name="android:layout_width">175dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_weight">5.3</item>
+        <item name="android:background">@drawable/rectangle2</item>
+    </style>
+
+    <style name="RedScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="BlueScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="Colon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="BlastoiseStyle">
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:contentDescription">@string/image_of_blastoise</item>
+    </style>
+
+    <style name="CharizardStyle">
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:contentDescription">@string/image_of_charizard</item>
+    </style>
+
+    <style name="BluePlayer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlueHp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BlueGames">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BlueMatchScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="RedPlayer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RedHp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="RedGames">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="RedMatchScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="FireAttack">
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:contentDescription">@string/image_of_fire_attack</item>
+    </style>
+
+    <style name="WaterAttack">
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">23dp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:contentDescription">@string/image_of_water_attack</item>
+    </style>
+
+    <style name="MainConstraint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="BlueProgress" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">89dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:max">110</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:progress">110</item>
+    </style>
+
+    <style name="RedProgress" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">89dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:max">110</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:progress">110</item>
+    </style>
+
 
 </resources>
