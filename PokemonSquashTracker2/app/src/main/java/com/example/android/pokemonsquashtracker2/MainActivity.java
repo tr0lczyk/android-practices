@@ -48,11 +48,43 @@ public class MainActivity extends AppCompatActivity {
     Animation blastoiseFloat;
     Animation charizardFloat;
 
+    static final String RED_SCORE = "red_Score";
+    static final String BLUE_SCORE = "blue_Score";
+    static final String RED_MATCH_SCORE = "red_Match_Score";
+    static final String BLUE_MATCH_SCORE = "blue_Match_Score";
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(RED_SCORE, redScore);
+        savedInstanceState.putInt(BLUE_SCORE, blueScore);
+        savedInstanceState.putInt(RED_MATCH_SCORE, redMatchScore);
+        savedInstanceState.putInt(BLUE_MATCH_SCORE, blueMatchScore);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Check whether we're recreating a previously destroyed instance
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            redScore = savedInstanceState.getInt(RED_SCORE);
+            blueScore = savedInstanceState.getInt(BLUE_SCORE);
+            redMatchScore = savedInstanceState.getInt(RED_MATCH_SCORE);
+            blueMatchScore = savedInstanceState.getInt(BLUE_MATCH_SCORE);
+        } else {
+            redScore = 0;
+            blueScore = 0;
+            redMatchScore = 0;
+            blueMatchScore = 0;
+        }
         setContentView(R.layout.activity_main);
+        displayScoreR(redScore);
+        displayScoreB(blueScore);
+        displayMatchScoreR(redMatchScore);
+        displayMatchScoreB(blueMatchScore);
 
         blastoise = findViewById(R.id.blastoise_image);
         charizard = findViewById(R.id.charizard_image);
@@ -67,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
         prgR = findViewById(R.id.red_progress_bar);
         prgB = findViewById(R.id.blue_progress_bar);
+
+
     }
 
     /*
