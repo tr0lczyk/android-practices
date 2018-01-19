@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         prgR = findViewById(R.id.red_progress_bar);
         prgB = findViewById(R.id.blue_progress_bar);
 
-
     }
 
     /*
