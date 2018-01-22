@@ -28,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    Log.i("EnterpriseActivity.java", "Captain's Log, Stardate 43125.8. We have entered a spectacular binary star system in the Kavis Alpha sector on a most critical mission of astrophysical research.");
-
-
     public void changePicture(){
         ImageView newPicture = (ImageView) findViewById(R.id.android_cookie_image_view);
         newPicture.setImageResource(R.drawable.after_cookie);
