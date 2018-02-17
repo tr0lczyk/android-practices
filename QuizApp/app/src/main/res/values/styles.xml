@@ -15,7 +15,7 @@
     </style>
 
     <style name="RadioButton" parent="AppTheme">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/radiobutton_text</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -42,41 +42,41 @@
     <style name="QuestionLayoutStyle" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:layout_marginBottom">@dimen/bigone</item>
         <item name="android:background">@drawable/shadow_background</item>
-        <item name="android:elevation">4dp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:padding">@dimen/question_margin_bottom</item>
     </style>
 
     <style name="QuestionLayoutStyle2" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:layout_marginBottom">@dimen/bigone</item>
         <item name="android:background">@drawable/shadow_background2</item>
-        <item name="android:elevation">4dp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:padding">@dimen/question_margin_bottom</item>
     </style>
 
     <style name="QuestionLayoutStyle3" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:layout_marginBottom">@dimen/bigone</item>
         <item name="android:background">@drawable/shadow_background</item>
-        <item name="android:elevation">4dp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:padding">@dimen/question_margin_bottom</item>
         <item name="android:orientation">vertical</item>
     </style>
 
     <style name="QuestionTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginBottom">@dimen/question_margin_bottom</item>
     </style>
 
     <style name="QuestionTextView2">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginBottom">@dimen/question_margin_bottom</item>
         <item name="android:textColor">@color/baseTextColor</item>
     </style>
 
@@ -84,7 +84,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">@dimen/question_margin_bottom</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textAllCaps">true</item>
     </style>
@@ -137,10 +137,10 @@
         <item name="android:background">@color/logoTextViewColor</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:gravity">center</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingTop">@dimen/logo_padding</item>
+        <item name="android:paddingBottom">@dimen/logo_padding</item>
         <item name="android:textColor">@color/baseTextColor</item>
-        <item name="android:textSize">45sp</item>
+        <item name="android:textSize">@dimen/logo_text</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -148,32 +148,32 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">@dimen/question_margin_bottom</item>
         <item name="android:background">@color/questionBackground</item>
     </style>
 
     <style name="PadawanTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">34sp</item>
+        <item name="android:textSize">@dimen/padavan_text</item>
     </style>
 
     <style name="MessageTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">16dp</item>
-        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">@dimen/question_margin_bottom</item>
+        <item name="android:paddingTop">@dimen/question_margin_bottom</item>
     </style>
 
     <style name="FalconImageView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_height">@dimen/falcon_height</item>
         <item name="android:src">@drawable/falcon</item>
     </style>
 
     <style name="LogoRelativeLayout">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_height">@dimen/logo_height</item>
     </style>
 
 

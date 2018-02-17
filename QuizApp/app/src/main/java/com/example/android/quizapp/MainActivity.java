@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         boolean twoGoodAnswerB = checkBoxCorrectBTwo.isChecked();
         CheckBox checkBoxCorrectCTwo = (CheckBox) findViewById(R.id.two_good_answerC);
         boolean twoGoodAnswerC = checkBoxCorrectCTwo.isChecked();
-        if (twoGoodAnswerA && twoGoodAnswerB && twoGoodAnswerC) {
+        CheckBox checkBoxWrongOne = (CheckBox) findViewById(R.id.bad_checkbox_one);
+        boolean twoBadAnswerD = checkBoxWrongOne.isChecked();
+        if (twoGoodAnswerA && twoGoodAnswerB && twoGoodAnswerC && twoBadAnswerD == false) {
             return 1;
         } else {
             return 0;
@@ -106,7 +108,11 @@ public class MainActivity extends AppCompatActivity {
         boolean fiveGoodAnswerA = checkBoxCorrectAFive.isChecked();
         CheckBox checkBoxCorrectBFive = (CheckBox) findViewById(R.id.five_good_answerB);
         boolean fiveGoodAnswerB = checkBoxCorrectBFive.isChecked();
-        if (fiveGoodAnswerA && fiveGoodAnswerB) {
+        CheckBox checkBoxWrongTwo = (CheckBox) findViewById(R.id.bad_checkbox_two);
+        boolean fiveBadAnswerC = checkBoxWrongTwo.isChecked();
+        CheckBox checkBoxWrongThree = (CheckBox) findViewById(R.id.bad_checkbox_three);
+        boolean fiveBadAnswerD = checkBoxWrongThree.isChecked();
+        if (fiveGoodAnswerA == true && fiveGoodAnswerB == true && fiveBadAnswerC == false && fiveBadAnswerD == false) {
             return 1;
         } else {
             return 0;
@@ -153,9 +159,9 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxWrongOne = (CheckBox) findViewById(R.id.bad_checkbox_one);
         checkBoxWrongOne.setChecked(false);
         CheckBox checkBoxWrongTwo = (CheckBox) findViewById(R.id.bad_checkbox_two);
-        checkBoxWrongOne.setChecked(false);
+        checkBoxWrongTwo.setChecked(false);
         CheckBox checkBoxWrongThree = (CheckBox) findViewById(R.id.bad_checkbox_three);
-        checkBoxWrongOne.setChecked(false);
+        checkBoxWrongThree.setChecked(false);
         RadioButton checkRadioButtonWrongOne = (RadioButton) findViewById(R.id.wrong_radio_one);
         checkRadioButtonWrongOne.setChecked(false);
         RadioButton checkRadioButtonWrongTwo = (RadioButton) findViewById(R.id.wrong_radio_two);

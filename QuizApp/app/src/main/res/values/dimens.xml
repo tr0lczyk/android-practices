@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bigone">36dp</dimen>
+    <dimen name="question_margin_bottom">16dp</dimen>
+    <dimen name="elevation">8dp</dimen>
+    <dimen name="logo_padding">24dp</dimen>
+    <dimen name="falcon_height">100dp</dimen>
+    <dimen name="logo_height">200dp</dimen>
+    <dimen name="padavan_text">34sp</dimen>
+    <dimen name="logo_text">45sp</dimen>
+    <dimen name="radiobutton_text">14sp</dimen>
+</resources>

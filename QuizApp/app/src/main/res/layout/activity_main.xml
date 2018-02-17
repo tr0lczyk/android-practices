@@ -246,7 +246,7 @@
             <Button
                 style="@style/ButtonStyle"
                 android:onClick="isNameThere"
-                android:text="@string/Submit" />
+                android:text="@string/Submit"/>
 
             <Button
                 style="@style/ButtonStyle"
