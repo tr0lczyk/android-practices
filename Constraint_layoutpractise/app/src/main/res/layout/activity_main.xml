@@ -10,22 +10,37 @@
         android:id="@+id/imageViewHeader"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/header"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/p5_cast"
-        android:contentDescription="@string/header"/>
+        app:srcCompat="@drawable/p5_cast" />
 
     <ImageView
         android:id="@+id/imageViewPoster"
         android:layout_width="0dp"
         android:layout_height="150dp"
+        android:layout_marginLeft="16dp"
         android:contentDescription="@string/poster"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewHeader"
         app:layout_constraintDimensionRatio="w,3:4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
         app:srcCompat="@drawable/persona5_cover" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
+        tools:text="Persona 5ive" />
 
 </android.support.constraint.ConstraintLayout>
