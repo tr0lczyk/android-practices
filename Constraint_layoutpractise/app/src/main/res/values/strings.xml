@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Constraint_layout_practise</string>
+    <string name="header">Header photo</string>
+    <string name="poster">Poster Image</string>
 </resources>
