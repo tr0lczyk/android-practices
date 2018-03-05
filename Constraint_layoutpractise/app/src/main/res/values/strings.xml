@@ -2,4 +2,10 @@
     <string name="app_name">Constraint_layout_practise</string>
     <string name="header">Header photo</string>
     <string name="poster">Poster Image</string>
+    <string name="persona">Persona 5ive Phantom Thieves</string>
+    <string name="textview2">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="button2">Button</string>
 </resources>
