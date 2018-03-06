@@ -8,4 +8,8 @@
     <string name="todo">TODO</string>
     <string name="button">Button</string>
     <string name="button2">Button</string>
+    <string name="match">Match</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="rotten">Rotten</string>
 </resources>
