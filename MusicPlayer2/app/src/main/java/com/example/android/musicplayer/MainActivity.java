@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button playButton = findViewById(R.id.buttonPlay);
         final Button pauseButton = findViewById(R.id.buttonPause);
-        Button stopButton = findViewById(R.id.buttonStop);
+        final Button stopButton = findViewById(R.id.buttonStop);
         pauseButton.setEnabled(false);
         SeekBar seekBar = findViewById(R.id.seekBar);
 
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mediaPlayer.pause();
+                pauseButton.setEnabled(false);
             }
         });
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mediaPlayer.reset();
+                stopButton.setEnabled(false);
             }
         });
     }
