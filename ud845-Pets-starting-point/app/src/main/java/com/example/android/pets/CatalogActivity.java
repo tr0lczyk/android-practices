@@ -143,8 +143,8 @@ public class CatalogActivity extends AppCompatActivity {
         values.put(PetEntry.COLUMN_PET_GENDER, PetEntry.GENDER_MALE);
         values.put(PetEntry.COLUMN_PET_WEIGHT, 7);
 
-        long newRowId = db.insert(PetEntry.TABLE_NAME,null,values);
-        Log.v("CatalogActivity", "New Row Id "+ newRowId);
+            long newRowId = db.insert(PetEntry.TABLE_NAME,null,values);
+            Log.v("CatalogActivity", "New Row Id "+ newRowId);
     }
 
     @Override
