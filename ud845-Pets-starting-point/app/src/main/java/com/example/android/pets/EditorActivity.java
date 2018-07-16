@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 package com.example.android.pets;
-
 import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentValues;
@@ -40,44 +39,26 @@ import android.widget.Toast;
 
 import com.example.android.pets.data.PetContract.PetEntry;
 
-/**
- * Allows user to create a new pet or edit an existing one.
- */
 public class EditorActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
-    /** Identifier for the pet data loader */
+
     private static final int EXISTING_PET_LOADER = 0;
 
-    /** Content URI for the existing pet (null if it's a new pet) */
     private Uri mCurrentPetUri;
 
-    /** EditText field to enter the pet's name */
     private EditText mNameEditText;
 
-    /** EditText field to enter the pet's breed */
     private EditText mBreedEditText;
 
-    /** EditText field to enter the pet's weight */
     private EditText mWeightEditText;
 
-    /** EditText field to enter the pet's gender */
     private Spinner mGenderSpinner;
 
-    /**
-     * Gender of the pet. The possible valid values are in the PetContract.java file:
-     * {@link PetEntry#GENDER_UNKNOWN}, {@link PetEntry#GENDER_MALE}, or
-     * {@link PetEntry#GENDER_FEMALE}.
-     */
     private int mGender = PetEntry.GENDER_UNKNOWN;
 
-    /** Boolean flag that keeps track of whether the pet has been edited (true) or not (false) */
     private boolean mPetHasChanged = false;
 
-    /**
-     * OnTouchListener that listens for any user touches on a View, implying that they are modifying
-     * the view, and we change the mPetHasChanged boolean to true.
-     */
     private View.OnTouchListener mTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -91,26 +72,14 @@ public class EditorActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
-        // Examine the intent that was used to launch this activity,
-        // in order to figure out if we're creating a new pet or editing an existing one.
         Intent intent = getIntent();
         mCurrentPetUri = intent.getData();
 
-        // If the intent DOES NOT contain a pet content URI, then we know that we are
-        // creating a new pet.
         if (mCurrentPetUri == null) {
-            // This is a new pet, so change the app bar to say "Add a Pet"
             setTitle(getString(R.string.editor_activity_title_new_pet));
-
-            // Invalidate the options menu, so the "Delete" menu option can be hidden.
-            // (It doesn't make sense to delete a pet that hasn't been created yet.)
             invalidateOptionsMenu();
         } else {
-            // Otherwise this is an existing pet, so change app bar to say "Edit Pet"
             setTitle(getString(R.string.editor_activity_title_edit_pet));
-
-            // Initialize a loader to read the pet data from the database
-            // and display the current values in the editor
             getLoaderManager().initLoader(EXISTING_PET_LOADER, null, this);
         }
 
@@ -174,8 +143,6 @@ public class EditorActivity extends AppCompatActivity implements
      * Get user input from editor and save pet into database.
      */
     private void savePet() {
-        // Read from input fields
-        // Use trim to eliminate leading or trailing white space
         String nameString = mNameEditText.getText().toString().trim();
         String breedString = mBreedEditText.getText().toString().trim();
         String weightString = mWeightEditText.getText().toString().trim();
